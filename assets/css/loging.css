@@ -1,8 +1,19 @@
+/* CSS Custom Properties for Black & White Theme */
+:root {
+    --primary-black: #000000;
+    --primary-white: #ffffff;
+    --accent-gray: #333333;
+    --text-muted: #cccccc;
+    --border-light: rgba(255, 255, 255, 0.2);
+    --shadow-white: rgba(255, 255, 255, 0.2);
+    --shadow-black: rgba(0, 0, 0, 0.5);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -10,8 +21,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    background-color: #000000;
+    color: #ffffff;
     overflow: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Background circles animation */
@@ -21,7 +34,7 @@ body {
     position: absolute;
     width: 400px;
     height: 400px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     animation: float 6s infinite ease-in-out;
 }
@@ -44,11 +57,12 @@ body {
     position: relative;
     width: 380px;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    color: #fff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
     text-align: center;
 }
 
@@ -68,8 +82,8 @@ body {
     padding: 12px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #fff;
-    color: #fff;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
     font-size: 16px;
     outline: none;
 }
@@ -80,7 +94,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
-    color: #ddd;
+    color: #cccccc;
     pointer-events: none;
     transition: 0.3s;
 }
@@ -89,24 +103,25 @@ body {
 .input-box input:valid ~ label {
     top: -10px;
     font-size: 13px;
-    color: #ffce00;
+    color: #ffffff;
 }
 
 /* Button */
 .btn {
     width: 100%;
     padding: 12px;
-    background: #ffce00;
-    border: none;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 25px;
-    color: #333;
+    color: #000000;
     font-weight: bold;
     cursor: pointer;
     transition: 0.4s;
 }
 
 .btn:hover {
-    background: #ffd633;
+    background-color: #000000;
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
@@ -118,11 +133,12 @@ body {
 }
 
 .links a {
-    color: #ffce00;
+    color: #ffffff;
     font-size: 14px;
     text-decoration: none;
 }
 
 .links a:hover {
+    color: #cccccc;
     text-decoration: underline;
 }
