@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    overflow: hidden;
+}
+
+/* Background circles animation */
+.background::before,
+.background::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out;
+}
+.background::before {
+    top: -100px;
+    left: -100px;
+}
+.background::after {
+    bottom: -120px;
+    right: -80px;
+    animation-delay: 3s;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+}
+
+/* Login Box */
+.login-box {
+    position: relative;
+    width: 380px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Inputs */
+.input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #ddd;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -10px;
+    font-size: 13px;
+    color: #ffce00;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #ffce00;
+    border: none;
+    border-radius: 25px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background: #ffd633;
+    transform: translateY(-2px);
+}
+
+/* Links */
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.links a {
+    color: #ffce00;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
