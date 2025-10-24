@@ -9,7 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     height: 100vh;
     overflow: hidden;
-    background-image: url('assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg');
+    background-image: url('assets/img/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -97,6 +97,9 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     min-width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 .login-btn {
