@@ -9,7 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     height: 100vh;
     overflow: hidden;
-    background-image: url('./assets/Group 4.png');
+    background-image: url('assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,12 +47,30 @@ body {
 }
 
 .company-name {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    letter-spacing: 0.2em;
+    font-size: 4.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.25em;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+.company-name::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
+    border-radius: 2px;
 }
 
 /* Navigation */
@@ -106,8 +124,13 @@ body {
 /* Responsive design */
 @media (max-width: 768px) {
     .company-name {
-        font-size: 2.5rem;
-        letter-spacing: 0.1em;
+        font-size: 3rem;
+        letter-spacing: 0.2em;
+    }
+    
+    .company-name::after {
+        width: 50%;
+        height: 2px;
     }
     
     .nav-buttons {
@@ -125,7 +148,13 @@ body {
 
 @media (max-width: 480px) {
     .company-name {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        letter-spacing: 0.15em;
+    }
+    
+    .company-name::after {
+        width: 40%;
+        height: 2px;
     }
     
     .btn {
