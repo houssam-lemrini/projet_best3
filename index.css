@@ -1,4 +1,278 @@
-h1 {
-    color: blue;
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Sign Up Container */
+.signup-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Side - Form Section */
+.signup-form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    padding: 2rem;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-header {
     text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: #cccccc;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Form Styles */
+.signup-form {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    background-color: #111111;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+.form-group input::placeholder {
+    color: #666666;
+}
+
+/* Sign Up Button */
+.signup-btn {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #333333;
+}
+
+.divider span {
+    background-color: #000000;
+    color: #cccccc;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.875rem;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    background-color: #111111;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    border-color: #ffffff;
+    background-color: #1a1a1a;
+}
+
+.google-btn:hover {
+    border-color: #4285f4;
+    background-color: #1a1a1a;
+}
+
+.github-btn:hover {
+    border-color: #ffffff;
+    background-color: #1a1a1a;
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+}
+
+/* Login Link */
+.login-link {
+    text-align: center;
+}
+
+.login-link p {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side - Image Section */
+.image-section {
+    flex: 1;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.image-container {
+    text-align: center;
+    max-width: 500px;
+}
+
+.image-placeholder {
+    color: #ffffff;
+}
+
+.image-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.image-placeholder h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.image-placeholder p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+    }
+    
+    .signup-form-section {
+        padding: 1.5rem;
+    }
+    
+    .image-section {
+        padding: 1.5rem;
+        min-height: 300px;
+    }
+    
+    .form-header h1 {
+        font-size: 1rem;
+    }
+    
+    .image-placeholder h2 {
+        font-size: 2rem;
+    }
+    
+    .image-placeholder i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-form-section {
+        padding: 1rem;
+    }
+    
+    .image-section {
+        padding: 1rem;
+    }
+    
+    .form-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .image-placeholder h2 {
+        font-size: 1.75rem;
+    }
 }
