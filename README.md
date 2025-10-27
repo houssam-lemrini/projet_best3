@@ -170,9 +170,10 @@ body {
 This project is open source and available under the [MIT License](LICENSE).
 
 ## 👥 **Team**
-- **Taha Bourkkadi** - Project Lead
-- **Abdelaziz Bhdlato** - Development
-- **Houssam Houbal** - Design & UX
+- **Houssam Lemrini** -  Project Lead
+- **Taha Bourkkadi** - Design & UX
+- **Abdelaziz Oudghiri** - Development
+- **Noaman Idelmou** - Hacker (arch user) 
 
 ---
 
